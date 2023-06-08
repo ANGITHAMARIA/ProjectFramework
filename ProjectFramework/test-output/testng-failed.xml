@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.ProjectFramework.LoginPage">
+      <class name="com.obsqura.testscripts.LoginTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="toLoginTo7rmartSupermarket"/>
+          <include name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton"/>
         </methods>
-      </class> <!-- com.obsqura.ProjectFramework.LoginPage -->
+      </class> <!-- com.obsqura.testscripts.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

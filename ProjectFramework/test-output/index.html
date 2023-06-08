@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,7 +21,8 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -50,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\javanewwork\ProjectFramework\testng.xml</span>
+                    <span>C:\Users\angit\git\ProjectFramework\ProjectFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.obsqura.ProjectFramework.LoginPage" class="method navigator-link" hash-for-method="toLoginTo7rmartSupermarket">toLoginTo7rmartSupermarket</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton">verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,23 +122,23 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.obsqura.ProjectFramework.LoginPage</span>
+              <span class="class-name">com.obsqura.testscripts.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="toLoginTo7rmartSupermarket">
-                  </a> <!-- toLoginTo7rmartSupermarket -->
-                  <span class="method-name">toLoginTo7rmartSupermarket</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;brand-text font-weight-light&apos;]&quot;}
+                  <a name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton">
+                  </a> <!-- verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton -->
+                  <span class="method-name">verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[@class=&apos;content&apos;]&quot;}
   (Session info: chrome=114.0.5735.110)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [94b3d212f2b3ada63bc40cede425cb4d, findElement {using=xpath, value=//span[@class=&apos;brand-text font-weight-light&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\angit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64831/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 94b3d212f2b3ada63bc40cede425cb4d
+Command: [2617f29f692402fbff01d53d9d5e88c5, findElement {using=xpath, value=//section[@class=&apos;content&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\angit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65398}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65398/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2617f29f692402fbff01d53d9d5e88c5
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -149,7 +150,11 @@ Session ID: 94b3d212f2b3ada63bc40cede425cb4d
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.obsqura.ProjectFramework.LoginPage.toLoginTo7rmartSupermarket(LoginPage.java:22)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+	at com.obsqura.projectframework.LoginPage.isContentSectionDisplayed(LoginPage.java:35)
+	at com.obsqura.testscripts.LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton(LoginTest.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
@@ -160,7 +165,7 @@ Session ID: 94b3d212f2b3ada63bc40cede425cb4d
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\javanewwork\ProjectFramework\testng.xml</span>
+            <span class="header-content">C:\Users\angit\git\ProjectFramework\ProjectFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -169,11 +174,11 @@ Session ID: 94b3d212f2b3ada63bc40cede425cb4d
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.obsqura.ProjectFramework.LoginPage&quot;&gt;
+      &lt;class name=&quot;com.obsqura.testscripts.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;toLoginTo7rmartSupermarket&quot;/&gt;
+          &lt;include name=&quot;verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.obsqura.ProjectFramework.LoginPage --&gt;
+      &lt;/class&gt; &lt;!-- com.obsqura.testscripts.LoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -215,14 +220,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'toLoginTo7rmartSupermarket')
-data.setCell(0, 2, 'com.obsqura.ProjectFramework.LoginPage')
-data.setCell(0, 3, 686);
+data.setCell(0, 1, 'verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton')
+data.setCell(0, 2, 'com.obsqura.testscripts.LoginTest')
+data.setCell(0, 3, 670);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 686 ms</span>
+              <span class="suite-total-time">Total running time: 670 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -248,7 +253,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.ProjectFramework.LoginPage</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.obsqura.testscripts.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser</span>
                 <span class="method-start">0 ms</span>
@@ -256,8 +261,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">toLoginTo7rmartSupermarket</span>
-                <span class="method-start">8788 ms</span>
+                <span class="method-name">verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</span>
+                <span class="method-start">4591 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

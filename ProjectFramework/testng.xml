@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.obsqura.ProjectFramework.LoginPage">
+      <class name="com.obsqura.testscripts.LoginTest">
       <methods>
-      <include name="toLoginTo7rmartSupermarket"/> 
+      <include name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton"/> 
       </methods>
      </class>
     </classes>

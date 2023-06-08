@@ -1,4 +1,4 @@
-package com.obsqura.ProjectFramework;
+package com.obsqura.testscripts;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,8 +13,8 @@ public class Base {
 		@BeforeMethod
 	    public void initializeBrowser()
 	    {
+			System.setProperty("webdriver.chrome.driver","C:\\javanewwork\\ProjectFramework\\src\\main\\resources\\chromedriver.exe");
 	        driver =new ChromeDriver();
-	        
 	        driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 	        driver.manage().window().maximize();
 	    }
