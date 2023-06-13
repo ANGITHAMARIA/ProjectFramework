@@ -17,24 +17,36 @@ public class LoginPage {
 	@FindBy(xpath="//input[@name='password']") WebElement passwordField;
 	@FindBy(xpath="//button[@class='btn btn-dark btn-block']") WebElement signInButton;
 	@FindBy(xpath="//section[@class='content']") WebElement contentsSection;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement invalidusernameorpasswordalertmsg;
 	
-	public void enterUsernameOnUsernameField(String userName)
+	public LoginPage enterUsernameOnUsernameField(String userName)
 	{
 		usernameField.sendKeys(userName);
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String password)
+	public LoginPage enterPasswordOnPasswordField(String password)
 	{
 		passwordField.sendKeys(password);
+		return this;
 	}
-	public void clickOnSignInButton()
+	public LoginPage clickOnSignInButton()
 	{
 		signInButton.click();
+		return this;
 	}
 	public boolean isContentSectionDisplayed()
 	{
 		boolean contentSectionIsDisplayed=contentsSection.isDisplayed();
 		return contentSectionIsDisplayed;
 	}
+	
+	public boolean isInvalidUsernameOrPasswordAlertMessageDisplayed()
+	{
+		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=invalidusernameorpasswordalertmsg.isDisplayed();
+		return invalidUsernameOrPasswordAlertMessageIsDisplayed;
+	}
+	
+	
 	
 }
 

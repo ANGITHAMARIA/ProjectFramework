@@ -8,37 +8,38 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,305</td><td></td><td></td></tr>
+<tr><th colspan="8">Parallel class testing</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">18,254</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.obsqura.testscripts.LoginTest</td><td><a href="#m0">verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</a></td><td rowspan="1">1686184288508</td><td rowspan="1">670</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Parallel class testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.obsqura.testscripts.LoginTest</td><td><a href="#m0">verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</a></td><td rowspan="1">1686625226941</td><td rowspan="1">165</td></tr><tr class="failedodd"><td rowspan="1">com.obsqura.testscripts.ManageProductsTest</td><td><a href="#m1">addNewProductViaManageProductPage</a></td><td rowspan="1">1686625227021</td><td rowspan="1">166</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.obsqura.testscripts.LoginTest</td><td><a href="#m2">verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton</a></td><td rowspan="1">1686625230913</td><td rowspan="1">649</td></tr><tr class="passedeven"><td><a href="#m3">verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton</a></td><td rowspan="1">1686625234607</td><td rowspan="1">1234</td></tr><tr class="passedeven"><td><a href="#m4">verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton</a></td><td rowspan="1">1686625239149</td><td rowspan="1">640</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.obsqura.testscripts.LoginTest#verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[@class=&apos;content&apos;]&quot;}
-  (Session info: chrome=114.0.5735.110)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2617f29f692402fbff01d53d9d5e88c5, findElement {using=xpath, value=//section[@class=&apos;content&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\angit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65398}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65398/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2617f29f692402fbff01d53d9d5e88c5
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-	at com.obsqura.projectframework.LoginPage.isContentSectionDisplayed(LoginPage.java:35)
-	at com.obsqura.testscripts.LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton(LoginTest.java:18)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.obsqura.testscripts.LoginTest#verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at com.obsqura.utilities.ExcelUtility.getString(ExcelUtility.java:95)
+	at com.obsqura.testscripts.LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton(LoginTest.java:16)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X1FF603EF
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 23 more
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.obsqura.testscripts.ManageProductsTest#addNewProductViaManageProductPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.obsqura.utilities.ExcelUtility.getString(ExcelUtility.java:100)
+	at com.obsqura.testscripts.ManageProductsTest.addNewProductViaManageProductPage(ManageProductsTest.java:15)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.obsqura.testscripts.LoginTest#verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>sample</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.obsqura.testscripts.LoginTest#verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.obsqura.testscripts.LoginTest#verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
