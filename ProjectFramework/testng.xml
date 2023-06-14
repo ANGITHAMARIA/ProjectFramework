@@ -4,11 +4,14 @@
 	<parameter name="browser" value="chrome" />
 	<parameter name="username" value="test" />
 	<parameter name="password" value="sample" />
+	<listeners>
+		<listener class-name="retry.Listeners" />
+	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.obsqura.testscripts.LoginTest">
+      <class name="com.obsqura.testscripts.ManageLocationTest">
       <methods>
-      <include name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton"/> 
+      <include name="verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage"/> 
       </methods>
      </class>
     </classes>

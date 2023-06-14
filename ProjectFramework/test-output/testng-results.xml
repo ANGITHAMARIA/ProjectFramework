@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-12T23:00:21 GMT-04:00" name="Parallel class testing" finished-at="2023-06-12T23:00:40 GMT-04:00" duration-ms="18254">
+  <suite started-at="2023-06-14T03:13:37 GMT-04:00" name="Suite" finished-at="2023-06-14T03:13:51 GMT-04:00" duration-ms="13762">
     <groups>
     </groups>
-    <test started-at="2023-06-12T23:00:21 GMT-04:00" name="Test" finished-at="2023-06-12T23:00:40 GMT-04:00" duration-ms="18254">
-      <class name="com.obsqura.testscripts.ManageProductsTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.ManageProductsTest@4f80542f]" started-at="2023-06-12T23:00:21 GMT-04:00" name="initializeBrowser" finished-at="2023-06-12T23:00:27 GMT-04:00" duration-ms="5195" status="PASS">
+    <test started-at="2023-06-14T03:13:37 GMT-04:00" name="Test" finished-at="2023-06-14T03:13:51 GMT-04:00" duration-ms="13762">
+      <class name="com.obsqura.testscripts.ManageLocationTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.ManageLocationTest@7a55af6b]" started-at="2023-06-14T03:13:37 GMT-04:00" name="initializeBrowser" finished-at="2023-06-14T03:13:45 GMT-04:00" duration-ms="8401" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,165 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="addNewProductViaManageProductPage()[pri:0, instance:com.obsqura.testscripts.ManageProductsTest@4f80542f]" started-at="2023-06-12T23:00:27 GMT-04:00" name="addNewProductViaManageProductPage" finished-at="2023-06-12T23:00:27 GMT-04:00" duration-ms="166" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.obsqura.utilities.ExcelUtility.getString(ExcelUtility.java:100)
-at com.obsqura.testscripts.ManageProductsTest.addNewProductViaManageProductPage(ManageProductsTest.java:15)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage()[pri:0, instance:com.obsqura.testscripts.ManageLocationTest@7a55af6b]" started-at="2023-06-14T03:13:45 GMT-04:00" name="verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage" description="Verify add location functionality from manage loaction page" finished-at="2023-06-14T03:13:50 GMT-04:00" duration-ms="5059" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewProductViaManageProductPage -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:com.obsqura.testscripts.ManageProductsTest@4f80542f]" started-at="2023-06-12T23:00:27 GMT-04:00" name="driverQuit" finished-at="2023-06-12T23:00:28 GMT-04:00" duration-ms="948" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- com.obsqura.testscripts.ManageProductsTest -->
-      <class name="com.obsqura.testscripts.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:21 GMT-04:00" name="initializeBrowser" finished-at="2023-06-12T23:00:26 GMT-04:00" duration-ms="5113" status="PASS">
+        </test-method> <!-- verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.testscripts.ManageLocationTest@7a55af6b]" started-at="2023-06-14T03:13:50 GMT-04:00" name="browserQuit" finished-at="2023-06-14T03:13:51 GMT-04:00" duration-ms="253" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[[TestResult name=verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage status=SUCCESS method=ManageLocationTest.verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage()[pri:0, instance:com.obsqura.testscripts.ManageLocationTest@7a55af6b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:26 GMT-04:00" name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton" finished-at="2023-06-12T23:00:27 GMT-04:00" duration-ms="165" status="FAIL">
-          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
-            <message>
-              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
-at com.obsqura.utilities.ExcelUtility.getString(ExcelUtility.java:95)
-at com.obsqura.testscripts.LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton(LoginTest.java:16)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X1FF603EF
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-... 23 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:27 GMT-04:00" name="driverQuit" finished-at="2023-06-12T23:00:27 GMT-04:00" duration-ms="710" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:27 GMT-04:00" name="initializeBrowser" finished-at="2023-06-12T23:00:30 GMT-04:00" duration-ms="3092" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton(java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:30 GMT-04:00" name="verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton" finished-at="2023-06-12T23:00:31 GMT-04:00" duration-ms="649" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[sample]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:31 GMT-04:00" name="driverQuit" finished-at="2023-06-12T23:00:31 GMT-04:00" duration-ms="257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:31 GMT-04:00" name="initializeBrowser" finished-at="2023-06-12T23:00:34 GMT-04:00" duration-ms="2787" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:34 GMT-04:00" name="verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton" finished-at="2023-06-12T23:00:35 GMT-04:00" duration-ms="1234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:35 GMT-04:00" name="driverQuit" finished-at="2023-06-12T23:00:36 GMT-04:00" duration-ms="258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:36 GMT-04:00" name="initializeBrowser" finished-at="2023-06-12T23:00:39 GMT-04:00" duration-ms="3049" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:39 GMT-04:00" name="verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton" finished-at="2023-06-12T23:00:39 GMT-04:00" duration-ms="640" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:com.obsqura.testscripts.LoginTest@2805d709]" started-at="2023-06-12T23:00:39 GMT-04:00" name="driverQuit" finished-at="2023-06-12T23:00:40 GMT-04:00" duration-ms="249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- com.obsqura.testscripts.LoginTest -->
+        </test-method> <!-- browserQuit -->
+      </class> <!-- com.obsqura.testscripts.ManageLocationTest -->
     </test> <!-- Test -->
-  </suite> <!-- Parallel class testing -->
+  </suite> <!-- Suite -->
 </testng-results>

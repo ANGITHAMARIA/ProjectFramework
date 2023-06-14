@@ -120,6 +120,27 @@ public class ExcelUtility {
 		int value = (int) c.getNumericCellValue();
 		return String.valueOf(value);
 	}
+	
+	public static String getNumeric(int i, int j, String sheet) {
+		String file_path = GeneralUtility.TESTDATAFILE;
+		try {
+			f = new FileInputStream(file_path);
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		try {
+			wb = new XSSFWorkbook(f);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		sh = wb.getSheet(sheet);
+		Row r = sh.getRow(i);
+		Cell c = r.getCell(j);
+		int value = (int) c.getNumericCellValue();
+		return String.valueOf(value);
+	}
 
 	public static void setValues(String file_path, String sheet) {
 		try {
