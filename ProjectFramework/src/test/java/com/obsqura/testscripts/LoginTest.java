@@ -2,6 +2,7 @@ package com.obsqura.testscripts;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.obsqura.pages.LoginPage;
@@ -29,12 +30,12 @@ public class LoginTest extends Base {
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with valid username and invalid password");
 	}
 	
-	@Test
-	public void verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton()
+	@Test(dataProvider = "LoginProvider")
+	public void verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton(String username,String password)
 	{
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(3, 0, "LoginPage"));
-		loginpage.enterPasswordOnPasswordField(ExcelUtility.getString(3, 1, "LoginPage"));
+		loginpage.enterUsernameOnUsernameField(username);
+		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickOnSignInButton();
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=loginpage.isInvalidUsernameOrPasswordAlertMessageDisplayed();
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with invalid username and valid password");
@@ -51,4 +52,11 @@ public class LoginTest extends Base {
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=loginpage.isInvalidUsernameOrPasswordAlertMessageDisplayed();
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with invalid username and invalid password");
 	}
+	
+	@DataProvider(name = "LoginProvider")
+	public Object[][] getDataFromTestData() {
+		return new Object[][] { { ExcelUtility.getString(3, 0, "LoginPage"), ExcelUtility.getString(3, 1, "LoginPage") },
+
+		};
+}
 }

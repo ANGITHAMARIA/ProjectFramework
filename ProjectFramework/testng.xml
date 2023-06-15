@@ -9,9 +9,9 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.obsqura.testscripts.ManageLocationTest">
+      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
       <methods>
-      <include name="verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage"/> 
+      <include name="verifyEditDeliveryBoyFunctionalityFromManageDeliveryBoyPageByEditingPhoneNumberAndAddress"/> 
       </methods>
      </class>
     </classes>

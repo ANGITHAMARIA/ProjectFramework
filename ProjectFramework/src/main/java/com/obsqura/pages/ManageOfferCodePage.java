@@ -11,9 +11,12 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.obsqura.utilities.PageUtility;
+
 public class ManageOfferCodePage {
 
 	public WebDriver driver;
+	PageUtility pageutility=new PageUtility();
 	public ManageOfferCodePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -131,9 +134,11 @@ public class ManageOfferCodePage {
 	}
 	public ManageOfferCodePage scrollToUpdateButtonAndClickOnUpdateButtonInEditOffersPage()
 	{
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", updateButtoninEditOfferCodePage);
-		js.executeScript("arguments[0].click();", updateButtoninEditOfferCodePage);
+		pageutility.scrollToElement(driver, updateButtoninEditOfferCodePage);
+		pageutility.toClickButton(driver, updateButtoninEditOfferCodePage);
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("arguments[0].scrollIntoView(true);", updateButtoninEditOfferCodePage);
+//		js.executeScript("arguments[0].click();", updateButtoninEditOfferCodePage);
 		return this;
 	}
 	public boolean isUpdateOfferCodeSuccessAlertDisplayed()
@@ -143,9 +148,11 @@ public class ManageOfferCodePage {
 	}
 	public ManageOfferCodePage scrollToSaveButtonInAddOffersPage()
 	{
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", saveButton);
-		js.executeScript("arguments[0].click();", saveButton);
+		pageutility.scrollToElement(driver, saveButton);
+		pageutility.toClickButton(driver, saveButton);
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("arguments[0].scrollIntoView(true);", saveButton);
+//		js.executeScript("arguments[0].click();", saveButton);
 		return this;
 	}
 	public ManageOfferCodePage clickOnDeleteButtonInManageOfferCodesPage()

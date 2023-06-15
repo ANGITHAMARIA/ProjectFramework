@@ -9,13 +9,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.testscripts.ManageLocationTest">
+      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage"/>
+          <include name="verifyEditDeliveryBoyFunctionalityFromManageDeliveryBoyPageByEditingPhoneNumberAndAddress" invocation-numbers="1"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ManageLocationTest -->
+      </class> <!-- com.obsqura.testscripts.ManageDeliveryBoyTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

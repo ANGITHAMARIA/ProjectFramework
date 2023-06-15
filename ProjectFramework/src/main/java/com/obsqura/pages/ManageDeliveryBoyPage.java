@@ -27,6 +27,13 @@ public class ManageDeliveryBoyPage {
 	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement addDeliveryBoySuccessAlert;
 	
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']") WebElement searchButtonInManageDeliveryBoyPage;
+	@FindBy(xpath = "//input[@id='un']") WebElement nameFieldInSearchDeliveryBoyPage;
+	@FindBy(xpath = "//button[@class='btn btn-block-sm btn-danger']") WebElement searchButtonInSearchDeliveryBoyPage;
+	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-primary btncss']") WebElement editButtonInSearchDeliveryBoyPage;
+	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement updateButtonInEditDeliveryBoyPage;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement editDeliveryBoySuccessAlert;
+	
 	public ManageDeliveryBoyPage clickOnManageDeliveryBoyButtonInDashboard()
 	{
 		ManageDeliveryBoyButtonInDashBoard.click();
@@ -78,5 +85,48 @@ public class ManageDeliveryBoyPage {
 		boolean addDeliveryBoySuccessAlertIsDisplayed=addDeliveryBoySuccessAlert.isDisplayed();
 		return addDeliveryBoySuccessAlertIsDisplayed;
 	}
-	
+	public ManageDeliveryBoyPage clickOnSearchButtonInManageDeliveryBoyPage()
+	{
+		searchButtonInManageDeliveryBoyPage.click();
+		return this;
+	}
+	public ManageDeliveryBoyPage enterNameToSearchInSearchDeliveryBoyPage(String name)
+	{
+		nameFieldInSearchDeliveryBoyPage.sendKeys(name);
+		return this;
+	}
+	public ManageDeliveryBoyPage clickOnSearchButtonInSearchDeliveryBoyPage()
+	{
+		searchButtonInSearchDeliveryBoyPage.click();
+		return this;
+	}
+	public ManageDeliveryBoyPage clickOnEditButtonInSearchDeliveryBoyPage()
+	{
+		editButtonInSearchDeliveryBoyPage.click();
+		return this;
+	}
+	public ManageDeliveryBoyPage enterPhoneNumberInEditDeliveryBoyPage(String phoneNumber)
+	{
+		phoneNumberField.clear();
+		phoneNumberField.sendKeys(phoneNumber);
+		return this;
+	}
+	public ManageDeliveryBoyPage enterAddressInEditDeliveryBoyPage(String address)
+	{
+		addressField.clear();
+		addressField.sendKeys(address);
+		return this;
+	}
+	public ManageDeliveryBoyPage clickOnUpdateButtonInEditDeliveryBoyPage()
+	{
+		pageutility.scrollToElement(driver, updateButtonInEditDeliveryBoyPage);
+		pageutility.toClickButton(driver, updateButtonInEditDeliveryBoyPage);
+		//updateButtonInEditDeliveryBoyPage.click();
+		return this;
+	}
+	public boolean isEditDeliveryBoySuccessAlertDisplayed()
+	{
+		boolean editDeliveryBoySuccessAlertIsDisplayed= editDeliveryBoySuccessAlert.isDisplayed();
+		return editDeliveryBoySuccessAlertIsDisplayed;
+	}
 }

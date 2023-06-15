@@ -27,6 +27,11 @@ public class ManageLocationpage {
 	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement addLocationSuccessAlert;
 	
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']") WebElement searchButtonInManageLocationsPage;
+	@FindBy(xpath = "//button[@class='btn btn-danger btn-fix align-center']") WebElement searchButtonInSearchLocationPage;
+	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']//child::td[1]") WebElement locationNameFromSearchResultTable;
+	
+	
 	public ManageLocationpage clickOnManageLocationButtonInDashboard()
 	{
 		manageLocationButtonInDashboard.click();
@@ -67,4 +72,20 @@ public class ManageLocationpage {
 		boolean addLocationSuccessAlertIsDisplayed=addLocationSuccessAlert.isDisplayed();
 		return addLocationSuccessAlertIsDisplayed;
 	}
+	public ManageLocationpage clickOnSearchButtonInManageLocationsPage()
+	{
+		searchButtonInManageLocationsPage.click();
+		return this;
+	}
+	public ManageLocationpage clickOnSearchButtonInSearchLocationsPage()
+	{
+		searchButtonInSearchLocationPage.click();
+		return this;
+	}
+	public String getLocationNameFromSearchResultTable()
+	{
+		String locationName=locationNameFromSearchResultTable.getText();
+		return locationName;
+	}
+	
 }
