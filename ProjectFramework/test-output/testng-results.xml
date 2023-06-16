@@ -2,12 +2,15 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-15T20:39:15 GMT-04:00" name="Suite" finished-at="2023-06-15T20:39:51 GMT-04:00" duration-ms="35591">
+  <suite started-at="2023-06-15T23:01:58 GMT-04:00" name="Grouping testing" finished-at="2023-06-15T23:02:08 GMT-04:00" duration-ms="9962">
     <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@3a12c404]" name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton" class="com.obsqura.testscripts.LoginTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2023-06-15T20:39:15 GMT-04:00" name="Test" finished-at="2023-06-15T20:39:51 GMT-04:00" duration-ms="35591">
-      <class name="com.obsqura.testscripts.ManageOfferCodeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.ManageOfferCodeTest@db57326]" started-at="2023-06-15T20:39:15 GMT-04:00" name="initializeBrowser" finished-at="2023-06-15T20:39:21 GMT-04:00" duration-ms="6311" status="PASS">
+    <test started-at="2023-06-15T23:01:58 GMT-04:00" name="Test" finished-at="2023-06-15T23:02:08 GMT-04:00" duration-ms="9962">
+      <class name="com.obsqura.testscripts.LoginTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.LoginTest@3a12c404]" started-at="2023-06-15T23:01:58 GMT-04:00" name="initializeBrowser" finished-at="2023-06-15T23:02:05 GMT-04:00" duration-ms="6263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyAddNewOfferCodeFunctionalityInManageOfferCodePage()[pri:0, instance:com.obsqura.testscripts.ManageOfferCodeTest@db57326]" started-at="2023-06-15T20:39:21 GMT-04:00" name="verifyAddNewOfferCodeFunctionalityInManageOfferCodePage" finished-at="2023-06-15T20:39:50 GMT-04:00" duration-ms="28802" status="PASS">
+        <test-method signature="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@3a12c404]" started-at="2023-06-15T23:02:05 GMT-04:00" name="verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton" description="Verify whether user is able to login using valid username and password" finished-at="2023-06-15T23:02:08 GMT-04:00" duration-ms="3227" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddNewOfferCodeFunctionalityInManageOfferCodePage -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.testscripts.ManageOfferCodeTest@db57326]" started-at="2023-06-15T20:39:50 GMT-04:00" name="browserQuit" finished-at="2023-06-15T20:39:51 GMT-04:00" duration-ms="426" status="PASS">
+        </test-method> <!-- verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.testscripts.LoginTest@3a12c404]" started-at="2023-06-15T23:02:08 GMT-04:00" name="browserQuit" finished-at="2023-06-15T23:02:08 GMT-04:00" duration-ms="415" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddNewOfferCodeFunctionalityInManageOfferCodePage status=SUCCESS method=ManageOfferCodeTest.verifyAddNewOfferCodeFunctionalityInManageOfferCodePage()[pri:0, instance:com.obsqura.testscripts.ManageOfferCodeTest@db57326] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton status=SUCCESS method=LoginTest.verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()[pri:0, instance:com.obsqura.testscripts.LoginTest@3a12c404] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- com.obsqura.testscripts.ManageOfferCodeTest -->
+      </class> <!-- com.obsqura.testscripts.LoginTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Grouping testing -->
 </testng-results>

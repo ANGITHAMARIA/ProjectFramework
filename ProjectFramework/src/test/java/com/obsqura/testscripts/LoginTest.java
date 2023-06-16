@@ -12,7 +12,7 @@ import retry.Retry;
 
 public class LoginTest extends Base {
 
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to login using valid username and password")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to login using valid username and password",groups = {"regression"})
 	public void verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()
 	{
 		LoginPage loginpage=new LoginPage(driver);
