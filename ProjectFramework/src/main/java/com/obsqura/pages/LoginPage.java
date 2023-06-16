@@ -44,10 +44,7 @@ public class LoginPage {
 	{
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=invalidusernameorpasswordalertmsg.isDisplayed();
 		return invalidUsernameOrPasswordAlertMessageIsDisplayed;
-	}
-	
-	
-	
+	}	
 }
 
 

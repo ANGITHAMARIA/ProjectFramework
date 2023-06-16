@@ -1,38 +1,58 @@
 package com.obsqura.testscripts;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.obsqura.pages.LoginPage;
 import com.obsqura.pages.ManageProductsPage;
 import com.obsqura.utilities.ExcelUtility;
 
+import retry.Retry;
+
 public class ManageProductsTest extends Base {
 	
-@Test
-public void verifyAddNewProductFunctionalityAfterClickingAddButtonInManageProductPage()
+	LoginPage loginpage;
+	ManageProductsPage manageproductspage;
+	
+@Test(retryAnalyzer = Retry.class,dataProvider="ProductsTitleProvider",description="Verify search product functionality from manage products page")
+public void verifySearchFunctionalityInManageProductsPage(String title)
 {
-	LoginPage loginpage=new LoginPage(driver);
+	String expectedTitle=title;
+	loginpage=new LoginPage(driver);
 	loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(1, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(1, 1, "LoginPage")).clickOnSignInButton();
-	ManageProductsPage manageproductpage=new ManageProductsPage(driver);
-	manageproductpage.clickOnManageProductLinkFromDashBoard();
-	manageproductpage.clickOnAddNewProductButtonInManageProductPage();
-	manageproductpage.enterValueForTitleInTitleTextBoxInAddProductPage(ExcelUtility.getString(1, 0, "ManageProductsPage"));
-	manageproductpage.selectProductTypeOptionInAddProductsPage();
-	manageproductpage.enterValueForTagFieldInAddProductsPage(ExcelUtility.getString(1, 1, "ManageProductsPage"));
-	manageproductpage.selectGroupValueInAddProductsPage();
-	manageproductpage.selectPriceTypeInAddProductsPage();
-	//manageproductpage.enterValueForWeightValueFieldInAddProductsPage(ExcelUtility.getNumeric(1, 2, "C:\\Users\\angit\\git\\ProjectFramework\\ProjectFramework\\src\\main\\resources\\TestData.xlsx", "ManageProductsPage"));
-	manageproductpage.selectWeightUnitValueInAddProductsPage();
-	//manageproductpage.enterValueForMaximumQuantityCanOrderFieldInAddProductsPage(ExcelUtility.getString(1, 3, "ManageProductsPage"));
-	//manageproductpage.enterValueForPriceFieldInAddProductsPage(ExcelUtility.getString(1, 4, "ManageProductsPage"));
-	//manageproductpage.enterValueForMRPInAddProductsPage(ExcelUtility.getString(1, 5, "ManageProductsPage"));
-	//manageproductpage.enterValueForStockAvailabilityFieldInAddProductsPage(ExcelUtility.getString(1, 6, "ManageProductsPage"));
-	//manageproductpage.enterValueForPurchasePriceInAddProductsPage(ExcelUtility.getString(1, 7, "ManageProductsPage"));
-	manageproductpage.enterTextForDescriptionFieldInAddProductsPage(ExcelUtility.getString(1, 8, "ManageProductsPage"));
-	manageproductpage.uploadImageForImageFieldInAddProductsPage(ExcelUtility.getString(1, 9, "ManageProductsPage"));
-	manageproductpage.selectValueForFeaturedFieldInAddProductsPage();
-	manageproductpage.selectValueForComboFieldInAddProductsPage();
-	manageproductpage.saveTheSelectedValuesForNewProdcutInAddProductsPage();
+	manageproductspage=new ManageProductsPage(driver);
+	manageproductspage.clickOnManageProductLinkFromDashBoard().clickOnSearchButtonInManageProductPage().enterValueForTitleFieldInSearchProductPage(title).clickOnSearchButtonInSearchProductPage();
+	String titleInSearchResultTable=(manageproductspage.getTitleFromSearchResultTableAfterClickingOnSearchButton()).substring(0,9);
+	assertEquals(titleInSearchResultTable,expectedTitle,"Title from search result is not matching with given tile");
 }
 
+@Test(retryAnalyzer = Retry.class,description="Verify delete product functionality from manage products page")
+@Parameters("title")
+public void verifyDeleteFunctionalityInManageProductsPage(String title)
+{
+	loginpage=new LoginPage(driver);
+	loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(1, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(1, 1, "LoginPage")).clickOnSignInButton();
+	manageproductspage=new ManageProductsPage(driver);
+	manageproductspage.clickOnManageProductLinkFromDashBoard().clickOnSearchButtonInManageProductPage().enterValueForTitleFieldInSearchProductPage(title).clickOnSearchButtonInSearchProductPage().clickOnDeleteButtonInSearchProductPage().acceptProductDeleteAlertInSearchProductPage();
+	boolean productDeleteSuccessAlertIsDisplayed=manageproductspage.isProductDeleteSuccessAlertDisplayed();
+	assertTrue(productDeleteSuccessAlertIsDisplayed,"Error occured while deleting the given product");
 }
+
+@DataProvider(name = "ProductsTitleProvider")
+public Object[][] getDataFromTestData() {
+	
+	return new Object[][] 
+	    	{
+	            { "Product 6" },
+	            { "Home" }
+	           
+	        };
+
+	};
+
+}
+

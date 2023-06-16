@@ -8,9 +8,11 @@ import org.testng.annotations.Test;
 import com.obsqura.pages.LoginPage;
 import com.obsqura.utilities.ExcelUtility;
 
+import retry.Retry;
+
 public class LoginTest extends Base {
 
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to login using valid username and password")
 	public void verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()
 	{
 		LoginPage loginpage=new LoginPage(driver);
@@ -19,36 +21,30 @@ public class LoginTest extends Base {
 		assertTrue(contentSectionIsDisplayed,"Unable to login with valid username and password");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is not able to login using valid username and invalid password")
 	public void verifyTheUserCannotLoginwithValidusernameandInvalidPasswordWhileClickonSignInButton()
 	{
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(2, 0, "LoginPage"));
-		loginpage.enterPasswordOnPasswordField(ExcelUtility.getString(2, 1, "LoginPage"));
-		loginpage.clickOnSignInButton();
+		loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(2, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(2, 1, "LoginPage")).clickOnSignInButton();
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=loginpage.isInvalidUsernameOrPasswordAlertMessageDisplayed();
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with valid username and invalid password");
 	}
 	
-	@Test(dataProvider = "LoginProvider")
+	@Test(dataProvider = "LoginProvider",retryAnalyzer = Retry.class,description="Verify whether user is not able to login using invalid username and valid password")
 	public void verifyTheUserCannotLoginwithInvalidusernameandValidPasswordWhileClickonSignInButton(String username,String password)
 	{
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnSignInButton();
+		loginpage.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnSignInButton();
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=loginpage.isInvalidUsernameOrPasswordAlertMessageDisplayed();
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with invalid username and valid password");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is not able to login using invalid username and invalid password")
 	@Parameters({"username","password"})
 	public void verifyTheUserCannotLoginwithInvalidusernameandInvalidPasswordWhileClickonSignInButton(String username,String password)
 	{
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUsernameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnSignInButton();
+		loginpage.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnSignInButton();
 		boolean invalidUsernameOrPasswordAlertMessageIsDisplayed=loginpage.isInvalidUsernameOrPasswordAlertMessageDisplayed();
 		assertTrue(invalidUsernameOrPasswordAlertMessageIsDisplayed, "Able to login with invalid username and invalid password");
 	}

@@ -4,14 +4,15 @@
 	<parameter name="browser" value="chrome" />
 	<parameter name="username" value="test" />
 	<parameter name="password" value="sample" />
+	<parameter name="title" value="Cadbury Dairy Milk Roast Almond Chocolate 36 g" />
 	<listeners>
 		<listener class-name="retry.Listeners" />
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
+      <class name="com.obsqura.testscripts.ManageLocationTest">
       <methods>
-      <include name="verifyEditDeliveryBoyFunctionalityFromManageDeliveryBoyPageByEditingPhoneNumberAndAddress"/> 
+      <include name="verifySearchLocationFunctionalityByClickingSearchButtonInManageLocationPage"/> 
       </methods>
      </class>
     </classes>

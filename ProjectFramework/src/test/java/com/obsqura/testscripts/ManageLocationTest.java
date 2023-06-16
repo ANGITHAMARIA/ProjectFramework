@@ -9,12 +9,14 @@ import com.obsqura.pages.LoginPage;
 import com.obsqura.pages.ManageLocationpage;
 import com.obsqura.utilities.ExcelUtility;
 
+import retry.Retry;
+
 public class ManageLocationTest extends Base {
 
 	LoginPage loginpage;
 	ManageLocationpage managelocationpage;
 	
-	@Test(description="Verify add location functionality from manage location page")
+	@Test(retryAnalyzer = Retry.class,description="Verify add location functionality from manage location page")
 	public void verifyAddLocationFunctionalityByClickingNewButtonInManageLocationPage()
 	{
 		loginpage=new LoginPage(driver);
@@ -25,7 +27,7 @@ public class ManageLocationTest extends Base {
 		assertTrue(addLocationSuccessAlertIsDisplayed, "Error occured while adding new location from manage location page");
 	}
 	
-	@Test(description="Verify search location functionality from manage location page")
+	@Test(retryAnalyzer = Retry.class,description="Verify search location functionality from manage location page")
 	public void verifySearchLocationFunctionalityByClickingSearchButtonInManageLocationPage()
 	{
 		String expectedLocationName=ExcelUtility.getString(1, 1, "SearchLocation");

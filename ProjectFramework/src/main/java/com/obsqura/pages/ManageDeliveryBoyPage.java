@@ -26,7 +26,6 @@ public class ManageDeliveryBoyPage {
 	@FindBy(xpath = "//input[@id='password']") WebElement passwordField;
 	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement addDeliveryBoySuccessAlert;
-	
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']") WebElement searchButtonInManageDeliveryBoyPage;
 	@FindBy(xpath = "//input[@id='un']") WebElement nameFieldInSearchDeliveryBoyPage;
 	@FindBy(xpath = "//button[@class='btn btn-block-sm btn-danger']") WebElement searchButtonInSearchDeliveryBoyPage;

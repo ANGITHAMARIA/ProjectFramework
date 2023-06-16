@@ -3,19 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="password" value="sample"/>
   <parameter name="browser" value="chrome"/>
+  <parameter name="title" value="Cadbury Dairy Milk Roast Almond Chocolate 36 g"/>
   <parameter name="username" value="test"/>
   <listeners>
     <listener class-name="retry.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
+      <class name="com.obsqura.testscripts.ManageOfferCodeTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyEditDeliveryBoyFunctionalityFromManageDeliveryBoyPageByEditingPhoneNumberAndAddress" invocation-numbers="1"/>
           <include name="browserQuit"/>
+          <include name="verifyEditFunctionalityAfterSearchingForAnOfferCodeInManageOfferPage"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ManageDeliveryBoyTest -->
+      </class> <!-- com.obsqura.testscripts.ManageOfferCodeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

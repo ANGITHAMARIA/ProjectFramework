@@ -1,22 +1,27 @@
 package com.obsqura.pages;
 
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.obsqura.utilities.PageUtility;
+import com.obsqura.utilities.WaitUtility;
 
 public class ManageOfferCodePage {
 
 	public WebDriver driver;
 	PageUtility pageutility=new PageUtility();
+	WaitUtility waitutility=new WaitUtility();
 	public ManageOfferCodePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -40,7 +45,6 @@ public class ManageOfferCodePage {
 	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-primary btncss']") WebElement editButtonInManageOffersPage;
 	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement updateButtoninEditOfferCodePage;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement updateOfferCodeSuccessAlert;
-	
 	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-danger btncss']") WebElement deleteButtonInManageOfferCodesPage;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement deleteOfferCodeSuccessAlert;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement offerCodeAlreadyExistAlert;
@@ -135,10 +139,8 @@ public class ManageOfferCodePage {
 	public ManageOfferCodePage scrollToUpdateButtonAndClickOnUpdateButtonInEditOffersPage()
 	{
 		pageutility.scrollToElement(driver, updateButtoninEditOfferCodePage);
+		waitutility.waitForElement(driver, updateButtoninEditOfferCodePage);
 		pageutility.toClickButton(driver, updateButtoninEditOfferCodePage);
-//		JavascriptExecutor js = (JavascriptExecutor)driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);", updateButtoninEditOfferCodePage);
-//		js.executeScript("arguments[0].click();", updateButtoninEditOfferCodePage);
 		return this;
 	}
 	public boolean isUpdateOfferCodeSuccessAlertDisplayed()
@@ -149,10 +151,8 @@ public class ManageOfferCodePage {
 	public ManageOfferCodePage scrollToSaveButtonInAddOffersPage()
 	{
 		pageutility.scrollToElement(driver, saveButton);
+		waitutility.fluentwaitForElement(driver, saveButton);
 		pageutility.toClickButton(driver, saveButton);
-//		JavascriptExecutor js = (JavascriptExecutor)driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);", saveButton);
-//		js.executeScript("arguments[0].click();", saveButton);
 		return this;
 	}
 	public ManageOfferCodePage clickOnDeleteButtonInManageOfferCodesPage()
@@ -170,6 +170,4 @@ public class ManageOfferCodePage {
 		boolean deleteOfferCodeSuccessAlertIsDisplayed= deleteOfferCodeSuccessAlert.isDisplayed();
 		return deleteOfferCodeSuccessAlertIsDisplayed;
 	}
-	
-	
 }

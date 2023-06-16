@@ -26,7 +26,6 @@ public class ManageLocationpage {
 	@FindBy(xpath = "//input[@id='delivery']") WebElement deliveryChargeField;
 	@FindBy(xpath = "//button[@class='btn btn-danger']") WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement addLocationSuccessAlert;
-	
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']") WebElement searchButtonInManageLocationsPage;
 	@FindBy(xpath = "//button[@class='btn btn-danger btn-fix align-center']") WebElement searchButtonInSearchLocationPage;
 	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']//child::td[1]") WebElement locationNameFromSearchResultTable;
@@ -86,6 +85,5 @@ public class ManageLocationpage {
 	{
 		String locationName=locationNameFromSearchResultTable.getText();
 		return locationName;
-	}
-	
+	}	
 }

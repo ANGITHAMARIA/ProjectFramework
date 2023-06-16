@@ -17,7 +17,7 @@ public class ManageOfferCodeTest extends Base {
 	LoginPage loginpage;
 	ManageOfferCodePage manageoffercodepage;
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify add new offercode functionality from manage offercode page")
 	public void verifyAddNewOfferCodeFunctionalityInManageOfferCodePage()
 	{
 	loginpage=new LoginPage(driver);
@@ -28,7 +28,7 @@ public class ManageOfferCodeTest extends Base {
 	assertTrue(offerCodeAddedSuccessAlertDisplayed, "Error occured while adding new offer code");
 	}
 	
-	@Test(retryAnalyzer = Retry.class)
+	@Test(retryAnalyzer = Retry.class,description="Verify search offercode functionality from manage offercode page")
 	public void verifySearchFunctionalityInManageOfferCodePageByEnteringAnOfferCode()
 	{
 		String ExpectedOfferCode=ExcelUtility.getString(1, 0, "SearchOfferCode");
@@ -40,18 +40,18 @@ public class ManageOfferCodeTest extends Base {
 		assertEquals(ExpectedOfferCode, offerCodeInSearchResult, " OfferCode searched and result returned are different");	
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify edit offercode functionality from manage offercode page after searching for an offercode")
 	public void verifyEditFunctionalityAfterSearchingForAnOfferCodeInManageOfferPage()
 	{
 		loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(1, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(1, 1, "LoginPage")).clickOnSignInButton();
 		manageoffercodepage=new ManageOfferCodePage(driver);
-		manageoffercodepage.clickOnManageOfferCodeLinkFromDashBoard().clickOnSearchButtonInManageOfferCodePage().enterValueForOfferCodeInSearchOfferCodePage(ExcelUtility.getString(1, 0, "EditOfferCode")).clickOnSearchButtonInSearchOfferCodePage().clickOnEditButtonInManageOffersPage().enterValueForAmountFieldInAddOfferCodePage(ExcelUtility.getNumeric(1, 2, "EditOfferCode")).enterValueForDescriptionTextBoxInAddOfferCodePage(ExcelUtility.getString(1, 1, "EditOfferCode")).scrollToUpdateButtonAndClickOnUpdateButtonInEditOffersPage();
+		manageoffercodepage.clickOnManageOfferCodeLinkFromDashBoard().clickOnSearchButtonInManageOfferCodePage().enterValueForOfferCodeInSearchOfferCodePage(ExcelUtility.getString(1, 0, "EditOfferCode")).clickOnSearchButtonInSearchOfferCodePage().clickOnEditButtonInManageOffersPage().enterValueForAmountFieldInEditOfferCodePage(ExcelUtility.getNumeric(1, 2, "EditOfferCode")).enterValueForDescriptionTextBoxInEditOfferCodePage(ExcelUtility.getString(1, 1, "EditOfferCode")).scrollToUpdateButtonAndClickOnUpdateButtonInEditOffersPage();
 		boolean updateOfferCodeSuccessAlertDisplayed=manageoffercodepage.isUpdateOfferCodeSuccessAlertDisplayed();
 		assertTrue(updateOfferCodeSuccessAlertDisplayed, "Error occured while updating description and amount for the given offercode");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify delete offercode functionality from manage offercode page after searching for an offercode")
 	public void verifyDeleteFunctionalityAfterSearchingForAnOfferCodeInManageOfferPage()
 	{
 		loginpage=new LoginPage(driver);
