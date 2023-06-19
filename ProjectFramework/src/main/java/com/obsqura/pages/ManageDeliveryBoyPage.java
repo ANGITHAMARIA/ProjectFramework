@@ -120,7 +120,6 @@ public class ManageDeliveryBoyPage {
 	{
 		pageutility.scrollToElement(driver, updateButtonInEditDeliveryBoyPage);
 		pageutility.toClickButton(driver, updateButtonInEditDeliveryBoyPage);
-		//updateButtonInEditDeliveryBoyPage.click();
 		return this;
 	}
 	public boolean isEditDeliveryBoySuccessAlertDisplayed()

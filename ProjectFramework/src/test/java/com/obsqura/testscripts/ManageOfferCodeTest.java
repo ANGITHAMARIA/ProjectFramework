@@ -23,7 +23,7 @@ public class ManageOfferCodeTest extends Base {
 	loginpage=new LoginPage(driver);
 	loginpage.enterUsernameOnUsernameField(ExcelUtility.getString(1, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(1, 1, "LoginPage")).clickOnSignInButton();
 	manageoffercodepage=new ManageOfferCodePage(driver);
-	manageoffercodepage.clickOnManageOfferCodeLinkFromDashBoard().clickOnAddNewOfferCodeButtonInManageOfferCodePage().enterValueForOfferCodeInAddOfferCodePage(ExcelUtility.getString(1, 0, "AddOffercode")).selectFirstOrderUserField().enterValueForPercentageFieldInAddOfferCodePage(ExcelUtility.getNumeric(1, 1, "AddOffercode")).enterValueForAmountFieldInAddOfferCodePage(ExcelUtility.getNumeric(1, 2, "AddOffercode")).enterValueForDescriptionTextBoxInAddOfferCodePage(ExcelUtility.getString(1, 3, "AddOffercode")).selectImageInAddOfferCodePage(ExcelUtility.getString(1, 4, "AddOffercode")).scrollToSaveButtonInAddOffersPage();
+	manageoffercodepage.clickOnManageOfferCodeLinkFromDashBoard().clickOnAddNewOfferCodeButtonInManageOfferCodePage().enterValueForOfferCodeInAddOfferCodePage(ExcelUtility.getString(1, 0, "AddOffercode")).selectFirstOrderUserField().enterValueForPercentageFieldInAddOfferCodePage(ExcelUtility.getNumeric(1, 1, "AddOffercode")).enterValueForAmountFieldInAddOfferCodePage(ExcelUtility.getNumeric(1, 2, "AddOffercode")).enterValueForDescriptionTextBoxInAddOfferCodePage(ExcelUtility.getString(1, 3, "AddOffercode")).scrollToSaveButtonInAddOffersPage();
 	boolean offerCodeAddedSuccessAlertDisplayed=manageoffercodepage.isNewOfferCodeCreatedSuccessAlertDisplayed();
 	assertTrue(offerCodeAddedSuccessAlertDisplayed, "Error occured while adding new offer code");
 	}

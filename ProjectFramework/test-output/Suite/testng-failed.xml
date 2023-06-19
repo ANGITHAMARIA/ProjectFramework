@@ -10,13 +10,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.testscripts.ManageOfferCodeTest">
+      <class name="com.obsqura.testscripts.ManageLocationTest">
         <methods>
+          <include name="verifySearchLocationFunctionalityByClickingSearchButtonInManageLocationPage"/>
           <include name="initializeBrowser"/>
           <include name="browserQuit"/>
-          <include name="verifyEditFunctionalityAfterSearchingForAnOfferCodeInManageOfferPage"/>
         </methods>
-      </class> <!-- com.obsqura.testscripts.ManageOfferCodeTest -->
+      </class> <!-- com.obsqura.testscripts.ManageLocationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

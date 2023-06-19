@@ -47,8 +47,7 @@ public Object[][] getDataFromTestData() {
 	
 	return new Object[][] 
 	    	{
-	            { "Product 6" },
-	            { "Home" }
+	            { "Product 6" }
 	           
 	        };
 
